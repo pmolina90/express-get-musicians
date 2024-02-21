@@ -24,7 +24,7 @@ describe('./musicians endpoint', () => {
         // sends request to /musician endpoint
         const response = await request(app).get("/musicians");
         const responseData = JSON.parse(response.text);
-        //expect(response.text).toBe()
+       
     })
 
 

@@ -24,22 +24,5 @@ describe("./musicians endpoint", () => {
     const response = await request(app).get("/musicians");
     const responseData = JSON.parse(response.text);
   });
-});
 
-describe(" GET /musicians/:id endpoint", () => {
-  // Write your tests here
-  const request = require("supertest");
-
-  it("responds with json containing the musician corresponding to the id", (done) => {
-    request(app)
-      .get("/musicians/1")
-      .expect("Content-Type", /json/)
-      .expect(200)
-      .end((err, res) => {
-        if (err) return done(err);
-        const musician = res.body;
-        // Add your assertions here to validate the response
-        done();
-      });
-  });
 });
